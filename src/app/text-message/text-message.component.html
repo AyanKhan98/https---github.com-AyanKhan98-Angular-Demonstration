@@ -1,0 +1,19 @@
+<p>{{name}}</p>
+<p id="{{idAttribrute}}">url: {{url}}</p>
+<input disabled="false" type="text" value="check the disabled attribrute" />
+<input [disabled]="false" type="text" value="check the disabled attribrute">
+<input [disabled]="isDisabled" type="text" value="check the disabled attribrute">
+<!--<input [disabled]="{{isDisabled}}" type="text" value="check the disabled attribrute"> setting property value in {{}} is a syntax error-->
+
+<!--class bindings-->
+<p [class]="class1">taking class from object</p>
+<p [class]="class1" class="class2">normal class becomes dormant in presence of the binded ones</p>
+<p [class.conditional]="flag" class="class2">class2 gets implemented flag set to false</p>
+<h2 [ngClass]="classesObject">All those classes are getting implemented those who have true value</h2> 
+<h1>Style binding section</h1>
+
+<p [style.color]="'red'">Text is style binded  with hard coding</p>
+<p [style.color]="flag?'red':'green'">Text is style binded  according condition</p>
+<p [style.color]="highlightColor">Text is style binded  with property binding</p>
+<p [ngStyle]="styleObject">Style is binded from style object</p>
+

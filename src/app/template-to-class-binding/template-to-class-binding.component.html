@@ -1,0 +1,7 @@
+<h1>template-to-class-binding</h1>
+<h3>Event binding</h3>
+<button (click)="call()">This click event calls the call method</button>
+<br>
+<button (click)="propertyAssignment()">This click event assigns the property you see after clicking</button>{{greeting}}
+<button (click)="eventShower($event)">watch the event displayed in console and the event type beside after clicking the button</button>{{type}}
+<button (click)="greeting='Welcome user'">This click event assigns the property without any method call that you see after clicking</button>{{greeting}}
