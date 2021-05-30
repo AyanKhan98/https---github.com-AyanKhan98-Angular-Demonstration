@@ -1,0 +1,13 @@
+.firstclass{
+    color: aquamarine;
+    background-color: blueviolet;
+}
+
+.secondclass{
+    color:brown;
+    background-color: chartreuse;
+}
+
+.conditionalclass{
+    font-style: italic;
+}
