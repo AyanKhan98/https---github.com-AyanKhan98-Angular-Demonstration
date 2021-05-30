@@ -1,0 +1,36 @@
+<h1>structural-derictive works Here</h1>
+
+<h3 *ngIf="!ngcheck">you cannot see this line if you click the button toggle</h3>
+<button (click)="toggle()">toggle</button>
+<h2 *ngIf="ngcheck">you can see this  because the button click changed the ngcheck to true </h2>
+
+<h2>Now try the same with ng-template using nif's else</h2>
+
+<h3 *ngIf="!ngcheck1; else elseBlock">you cannot see this line if you click the button toggle1</h3>
+<button (click)="toggle1()">toggle1</button>
+<ng-template #elseBlock>
+<h2 >you can see this  because the button click changed the ngcheck1 to true </h2>
+</ng-template>
+
+<h2>Now try the same with ng-template using nif's else and the then block</h2>
+<button (click)="toggle1()">toggle1</button>
+<div *ngIf="!ngcheck1; then ifBlock; else elseBlock1"></div>
+    <ng-template #ifBlock>
+        <h2 >you can see this  because the button click changed the ngcheck1 to false </h2>
+        </ng-template>
+    <ng-template #elseBlock1>
+        <h2 >you can see this  because the button click changed the ngcheck1 to true </h2>
+        </ng-template>
+<button (click)='colorPicker("red")'>Red</button>
+<button (click)='colorPicker("green")'>Green</button>
+        <p>Colors are changed using ngSwitch</p>
+    <div [ngSwitch]="color">
+        <div *ngSwitchCase="'red'" style="color: red;">You picked the red</div>
+        <div *ngSwitchCase="'green'" style="color: Green;">You picked the green</div>
+        <div *ngSwitchDefault>White is selected by default</div>
+    </div>
+    <h2>ng for</h2>
+
+    <div *ngFor="let color of colors; index as i; first as f; last as l; odd as o; even as e">
+        <div>{{i}} {{color}} isFirst={{f}} isLast={{l}} isOdd={{o}} isEven={{e}}</div>
+    </div>

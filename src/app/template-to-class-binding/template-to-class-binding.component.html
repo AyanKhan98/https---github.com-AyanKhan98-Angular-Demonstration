@@ -5,3 +5,10 @@
 <button (click)="propertyAssignment()">This click event assigns the property you see after clicking</button>{{greeting}}
 <button (click)="eventShower($event)">watch the event displayed in console and the event type beside after clicking the button</button>{{type}}
 <button (click)="greeting='Welcome user'">This click event assigns the property without any method call that you see after clicking</button>{{greeting}}
+<input #myInput type="text">
+<button (click)="consoleLog(myInput.value)">log</button>{{check}}
+
+<h1>Two way binding</h1>
+
+<input [(ngModel)]="name" type="text">
+<p>Using ngModule we are displaying the input </p>{{name}}

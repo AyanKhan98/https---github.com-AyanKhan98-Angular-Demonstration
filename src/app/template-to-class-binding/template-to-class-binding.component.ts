@@ -9,6 +9,8 @@ export class TemplateToClassBindingComponent implements OnInit {
 
   public greeting="";
   public type="";
+  public check="";
+  public name="";
   constructor() { }
 
   ngOnInit(): void {
@@ -27,5 +29,10 @@ export class TemplateToClassBindingComponent implements OnInit {
     console.log(event);
     this.type=event.type;
 
+  }
+  consoleLog(value: string)
+  {
+    this.check="see the console output";
+    console.log(value)
   }
 }
