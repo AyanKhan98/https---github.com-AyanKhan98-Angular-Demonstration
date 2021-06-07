@@ -1,4 +1,8 @@
 <h1>Welcome</h1>
-<app-text-message></app-text-message>
-<app-template-to-class-binding></app-template-to-class-binding>
-<app-structural-derictive></app-structural-derictive>
+{{childData}}
+<nav>
+<a routerLink="/employeeList" routerLinkActive="active">Department</a>
+<br>
+<a routerLink="/employeeDetails" routerLinkActive="active">Employees</a>
+</nav>
+<router-outlet></router-outlet>
