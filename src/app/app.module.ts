@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
+import { DepartmentDetailComponent } from './department-detail/department-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
     InteracterComponentComponent,
     PipesComponent,
     routingComponents,
-    AppNotFoundComponent
+    AppNotFoundComponent,
+    DepartmentDetailComponent
     
   ],
   imports: [
