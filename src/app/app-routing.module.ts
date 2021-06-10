@@ -13,7 +13,7 @@ const routes: Routes=[
     component:EmployeeListComponent},
     {path:'employeeDetails',
       component:EmployeeDetailsComponent},
-      {path: 'department/:id',component:DepartmentDetailComponent},
+      {path: 'employeeDetails/:id',component:DepartmentDetailComponent},
       {path:"**",
       component:AppNotFoundComponent}
 ]

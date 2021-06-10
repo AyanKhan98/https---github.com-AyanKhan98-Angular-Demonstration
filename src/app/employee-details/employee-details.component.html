@@ -1,6 +1,6 @@
 <p>employee-details works!</p>
 <div *ngFor="let employee of employees">
     <ul>
-        <li><a (click)="onSelect(employee)">{{employee.name}}-{{employee.id}}</a></li>
+        <li><a [class.selected]="isSelected(employee)" (click)="onSelect(employee)">{{employee.name}}-{{employee.id}}</a></li>
     </ul>
 </div>
