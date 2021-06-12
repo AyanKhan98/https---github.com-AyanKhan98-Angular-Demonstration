@@ -15,6 +15,8 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+import { EmployeeOverviewComponent } from './employee-overview/employee-overview.component';
+import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DepartmentDetailComponent } from './department-detail/department-detail
     PipesComponent,
     routingComponents,
     AppNotFoundComponent,
-    DepartmentDetailComponent
+    DepartmentDetailComponent,
+    EmployeeOverviewComponent,
+    EmployeeContactComponent
     
   ],
   imports: [

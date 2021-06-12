@@ -8,8 +8,14 @@ import {ActivatedRoute, Router} from '@angular/router';
     <p>
       You selected {{departmentId}}
     </p>
-    <a (click)="goNext()">Next</a>
-    <a (click)="goPrevious()">Previous</a>
+    <button (click)="showOverview()">Overview</button>
+    <button (click)="showContact()">Contact</button>
+
+    <router-outlet></router-outlet>
+    <p>
+    <button (click)="goNext()">Next</button>
+    <button (click)="goPrevious()">Previous</button>
+    </p>
     <br>
     <button (click)="goDepartment()">Back</button><a>For optional parameter demo</a>
   `,
@@ -43,6 +49,16 @@ public departmentId:any;
     let selectedId=this.departmentId?this.departmentId:null;
     //this.route.navigate(["employeeDetails",{id: selectedId}]); sending optional parameter and absoluten routing
     this.route.navigate(["../",{id: selectedId}]);//sending optional route parameter with relative routing
+  }
+
+  showOverview()
+  {
+    this.route.navigate(["employeeOverview"],{relativeTo: this.router});
+  }
+
+  showContact()
+  {
+    this.route.navigate(["employeeContact"],{relativeTo: this.router});
   }
 
 }
